@@ -15,11 +15,13 @@ export class QuestionListComponent implements OnInit {
     this.questions = [
       {
         text : 'What is your name',
-        answer : 'My name is arafat'
+        answer : 'My name is arafat',
+        hide : true
       },
       {
         text : 'What is your Fav Food',
-        answer : 'I love BBQ'
+        answer : 'I love BBQ' ,
+        hide : true
       }
     ];
   }

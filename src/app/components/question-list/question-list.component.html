@@ -5,11 +5,13 @@
         <div class="uk-grid-small uk-flex-middle" uk-grid>
           <div class="uk-width-expand">
 
-            <h2 class="uk-card-title">{{question.text}}</h2>
+            <h2 class="uk-card-title">
+              {{question.text}}
+            </h2>  <a class="uk-link-muted" href="#" (click)="question.hide = !question.hide" >Show</a>
           </div>
         </div>
       </div>
-      <div class="uk-card-body">
+      <div class="uk-card-body" [hidden]="question.hide">
         <p>{{question.answer}}</p>
       </div>
     </div><br>
