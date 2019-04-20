@@ -13,7 +13,7 @@ export class QuestionListComponent implements OnInit {
   questions: Question[] ;
 
 
-  constructor(private data : DataService) {
+  constructor(private data: DataService) {
 
   }
 
