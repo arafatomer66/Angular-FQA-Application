@@ -1,3 +1,5 @@
+import { Question } from './../../models/questions.model';
+import { DataService } from './../../services/data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,25 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class QuestionListComponent implements OnInit {
 
 // tslint:disable-next-line: ban-types
-  questions: Object[] ;
+  questions: Question[] ;
 
 
-  constructor() {
-    this.questions = [
-      {
-        text : 'What is your name',
-        answer : 'My name is arafat',
-        hide : true
-      },
-      {
-        text : 'What is your Fav Food',
-        answer : 'I love BBQ' ,
-        hide : true
-      }
-    ];
+  constructor(private data : DataService) {
+
   }
 
   ngOnInit() {
+    this.questions = this.data.getQuestions() ;
   }
 
 }
