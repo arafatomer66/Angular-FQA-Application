@@ -7,21 +7,8 @@ import { Question } from '../models/questions.model';
 export class DataService {
 
   questions: Question[];
-
-
   constructor() {
-    // this.questions = [
-    //   {
-    //     text : 'What is your name',
-    //     answer : 'My name is arafat',
-    //     hide : true
-    //   },
-    //   {
-    //     text : 'What is your Fav Food',
-    //     answer : 'I love BBQ' ,
-    //     hide : true
-    //   }
-    // ];
+    
   }
   getQuestions() {
     if (localStorage.getItem('questions') === null) {
@@ -42,9 +29,7 @@ export class DataService {
       questions = JSON.parse(localStorage.getItem('questions'));
       questions.unshift(question);
       localStorage.setItem('questions', JSON.stringify(questions));
-
     }
-
   }
   removeQuestion(question: Question) {
     this.questions.forEach((element, index) => {
