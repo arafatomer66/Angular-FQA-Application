@@ -11,12 +11,13 @@ export class QuestionListComponent implements OnInit {
 
 // tslint:disable-next-line: ban-types
   questions: Question[] ;
-
-
   constructor(private data: DataService) {
 
   }
-
+  
+  addQuestion(question : Question){
+     this.data.addQuestion(question);
+  }
   ngOnInit() {
     this.questions = this.data.getQuestions() ;
   }

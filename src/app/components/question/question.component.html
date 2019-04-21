@@ -7,7 +7,9 @@
 
               <h2 class="uk-card-title">
                 {{question.text}}
-              </h2>  <a class="uk-link-muted" href="#" (click)="question.hide = !question.hide" >Show</a>
+              </h2> 
+               <a class="uk-link-muted" href="#" (click)="question.hide = !question.hide" >Show</a> | 
+               <a class="uk-link-muted" href="#" (click)="removeQuestion(question)" >Remove</a> 
             </div>
           </div>
         </div>

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="uk-card uk-card-default uk-width-1-2@m">
+    <div class="uk-card-header">
+      <div class="uk-grid-small uk-flex-middle" uk-grid>
+        <div class="uk-width-expand">
+          <h2 class="uk-card-title">
+            Add Question
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="uk-card-body">
+      <div class="uk-margin">
+        <form (submit)="addQuestion()">
+
+          <div class="uk-margin">
+            <div class="uk-inline">
+              <input class="uk-input uk-form-width-large" type="text" placeholder="Question" [(ngModel)]="text" name="text">
+            </div>
+          </div>
+
+          <div class="uk-margin">
+            <div class="uk-inline">
+              <input class="uk-input uk-form-width-large" type="text" placeholder="Answer" [(ngModel)]="answer" name="answer">
+            </div>
+          </div>
+          <button class="uk-button uk-button-default" type="submit" value="Submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div><br>
+</div>

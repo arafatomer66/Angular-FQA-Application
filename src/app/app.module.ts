@@ -7,17 +7,21 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
 import { DataService } from './services/data.service';
 import { QuestionComponent } from './components/question/question.component';
+import { AddQuestionComponent } from './components/add-question/add-question.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     QuestionListComponent,
-    QuestionComponent
+    QuestionComponent,
+    AddQuestionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
